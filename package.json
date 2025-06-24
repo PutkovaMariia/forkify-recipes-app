@@ -1,0 +1,21 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "Recipe application",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir dist --public-url ./",
+    "cleanup": "rmdir /q /s .parcel-cache dist"
+  },
+  "author": "Mariia Putkova",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-babel": "^2.15.4",
+    "@parcel/transformer-sass": "^2.15.4",
+    "parcel": "^2.15.4"
+  },
+  "dependencies": {
+    "core-js": "^3.43.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

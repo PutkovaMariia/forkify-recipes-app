@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link
+          href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+          rel="stylesheet"
+  />
+  <link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon" />
+
+  <script type="module" src="src/js/controller.js"></script>
+
+  <title>forkify // Search over 1,000,000 recipes</title>
+</head>
+
+<body>
+<div class="container">
+  <header class="header">
+    <img src="public/img/logo.png" alt="Logo" class="header__logo" />
+
+    <!-- SEARCH FORM -->
+    <form class="search">
+      <label>
+        <input
+                type="text"
+                class="search__field"
+                placeholder="Search over 1,000,000 recipes..."
+        />
+      </label>
+      <button class="btn search__btn">
+        <img
+                src="src/img/icons/icon-search.svg"
+                alt="Search icon"
+                class="search__icon"
+        />
+        <span>Search</span>
+      </button>
+    </form>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <button class="nav__btn nav__btn--add-recipe">
+            <img
+                    src="src/img/icons/icon-edit.svg"
+                    alt="Add recipe"
+                    class="nav__icon"
+            />
+            <span>Add recipe</span>
+          </button>
+        </li>
+        <li class="nav__item">
+          <button class="nav__btn nav__btn--bookmarks">
+            <img
+                    src="src/img/icons/icon-bookmark-primary.svg"
+                    alt="Bookmarks"
+                    class="nav__icon"
+            />
+            <span>Bookmarks</span>
+          </button>
+          <div class="bookmarks">
+            <ul class="bookmarks__list">
+              <li class="message">
+                <div>
+                  <img
+                          src="src/img/icons/icon-smile.svg"
+                          alt="No bookmarks"
+                          class="bookmarks__icon"
+                  />
+                </div>
+                <p>
+                  No bookmarks yet. Find a nice recipe and bookmark it :)
+                </p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- RESULTS AREA -->
+  <div class="search-results">
+    <ul class="results"></ul>
+    <div class="pagination"></div>
+    <p class="copyright">
+      &copy; Created by
+      <a
+              class="website-link"
+              target="_blank"
+              href="https://github.com/PutkovaMariia"
+      >Mariia Putkova</a
+      >
+    </p>
+  </div>
+
+  <!-- RECIPE DETAIL -->
+  <div class="recipe">
+    <div class="message">
+      <div>
+        <img
+                src="src/img/icons/icon-smile.svg"
+                alt="Start smiling"
+                class="recipe__icon--smile"
+        />
+      </div>
+      <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+    </div>
+  </div>
+</div>
+
+<!-- OVERLAY + ADD RECIPE MODAL -->
+<div class="overlay hidden"></div>
+<div class="add-recipe-window hidden">
+  <button class="btn--close-modal">&times;</button>
+  <form class="upload">
+    <div class="upload__column">
+      <h3 class="upload__heading">Recipe data</h3>
+      <label>Title</label>
+      <input required name="title" type="text" />
+      <label>URL</label>
+      <input required name="sourceUrl" type="text" />
+      <label>Image URL</label>
+      <input required name="image" type="text" />
+      <label>Publisher</label>
+      <input required name="publisher" type="text" />
+      <label>Prep time</label>
+      <input required name="cookingTime" type="number" />
+      <label>Servings</label>
+      <input required name="servings" type="number" />
+    </div>
+
+    <div class="upload__column">
+      <h3 class="upload__heading">Ingredients</h3>
+      <label>Ingredient 1</label>
+      <input
+              type="text"
+              required
+              name="ingredient-1"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+      <label>Ingredient 2</label>
+      <input
+              type="text"
+              name="ingredient-2"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+      <label>Ingredient 3</label>
+      <input
+              type="text"
+              name="ingredient-3"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+      <label>Ingredient 4</label>
+      <input
+              type="text"
+              name="ingredient-4"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+      <label>Ingredient 5</label>
+      <input
+              type="text"
+              name="ingredient-5"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+      <label>Ingredient 6</label>
+      <input
+              type="text"
+              name="ingredient-6"
+              placeholder="Format: 'Quantity,Unit,Description'"
+      />
+    </div>
+
+    <button class="btn upload__btn">
+      <img
+              src="src/img/icons/icon-upload-cloud.svg"
+              alt="Upload icon"
+              class="upload__icon"
+      />
+      <span>Upload</span>
+    </button>
+  </form>
+</div>
+</body>
+</html>
