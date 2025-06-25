@@ -7,7 +7,7 @@
 
 ## Live Demo
 
-https://https://putkovamariia.github.io/forkify-recipes-app/
+https://putkovamariia.github.io/forkify-recipes-app/
 
 ---
 
